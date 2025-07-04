@@ -1,0 +1,21 @@
+
+students = {
+    "om prakash": {"password": "12345", "roll_no": "101"},
+    "Anupam": {"password": "abc123", "roll_no": "102"},
+    "pream": {"password": "pass456", "roll_no": "103"}
+}
+
+def student_login():
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
+    roll_no = input("Enter your roll number: ")
+
+    if (username in students and
+        students[username]["password"] == password and
+        students[username]["roll_no"] == roll_no):
+        print(f"Login successful! Welcome, {username}.")
+    else:
+        print("Invalid username, password, or roll number. Please try again.")
+
+# Call the function
+student_login()
